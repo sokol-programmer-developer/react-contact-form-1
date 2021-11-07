@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*,*::before,*::after{ padding: 0;  margin: 0;  box-sizing: border-box; user-select: none}
+
+p,h1,h2,h3,h4,ul,li,a {list-style: none; text-decoration: none;  }
+
+
+
+.popup_overlay,
+.popup_container,
+.popup_h2,
+.popup_h3,
+.popup_close,
+.popup_content
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: grid;
+    position: relative;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+
+
+.popup_overlay {
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.7);
+    transition: all 0.25s linear;
+
+}
+
+.popup_container {
+    width: 21vw;
+    height: 40vh;
+    background-color: rgba(255,255,255, 1);
+    border: 0.1vh solid rgba(0,0,0, 0.4);
+    transition: all 0.25s linear;
+}
+
+.popup_h3 {
+    color: rgba(0,0,0, 0.6);
+    font-size: 5vh;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.popup_h2 {
+    color: rgba(0,0,0, 0.6);
+    font-size: 2vh;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+}
+
+.popup_close{
+    width: 4vw;
+    height: 4vh;
+    text-decoration: none;
+}
+.popup_close:hover {
+    cursor: pointer;
+    color: #000;
+}
+
+.popup_overlay{
+    bottom: 10vh;
+    width: 21vw;
+    height: 40vh;
+}
+
+.popup_content {
+    grid-template-rows: repeat(2,1fr);
+    width: 21vw;
+    height: 30vh;
+    overflow: auto;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 700px) {
+    .popup_container {
+        width: 70vw;
+    }
+}
